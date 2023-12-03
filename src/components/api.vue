@@ -112,34 +112,34 @@ const calcularColorAnillo = computed(() => {
 
       <div v-if="info && info.fin" class="flex items-center justify-stretch py-4 px-2 bg-[#0ea5e9] rounded-lg shandown w-full h-full">
         <div class="flex flex-col items-center justify-center h-full w-1/3 ">
-          <p class="font-sans text-black font-semibold text-md max-sm:text-sm pb-2">Porcentaje de Personas Evaluadas:</p>
+          <p class="font-sans text-black font-semibold text-md max-md:text-sm pb-2">Porcentaje de Personas Evaluadas:</p>
 
           <div class="flex flex-row items-center">
-            <p v-if="info && info.alTotal" class="font-sans px-4  text-sky-200 text-5xl max-sm:text-2xl max-sm:px-0 font-bold "> {{
+            <p v-if="info && info.alTotal" class="font-sans px-4  text-sky-200 text-5xl max-md:text-2xl max-md:px-0 font-bold "> {{
               calcularPorcentaje }} %
             </p>
             <img src="./img/lista-de-verificacion.png" alt="evaluaciones completas"
-              class=" w-16 h-16 max-sm:w-8 max-sm:h-8 max-sm:ml-1">
+              class=" w-16 h-16 max-md:w-8 max-md:h-8 max-md:ml-1">
 
           </div>
-          <span v-if="info && info.alEvaluados" class="font-sans text-sky-200 text-lg font-bold max-sm:text-sm">{{ info.alEvaluados
+          <span v-if="info && info.alEvaluados" class="font-sans text-sky-200 text-lg font-bold max-md:text-sm">{{ info.alEvaluados
           }} de {{ info.alTotal }}</span>
 
         </div>
 
-        <div class="relative  w-1/3 h-full p-12 max-sm:p-10 ">
+        <div class="relative  w-1/3 h-full p-12 max-md:p-10 ">
           <div class="absolute inset-0 flex items-center justify-center rounded-bl-full anillo"
             :style="{ background: calcularColorAnillo }"></div>
         </div>
 
         <div class="relative w-1/3 h-full">
-          <p class="font-sans text-black font-semibold text-md max-sm:text-sm pb-2">Porcentaje de Personas Faltantes:</p>
+          <p class="font-sans text-black font-semibold text-md max-md:text-sm pb-2">Porcentaje de Personas Faltantes:</p>
          <div class="flex flex-row items-center justify-center ">
-          <img src="./img/error.png" alt="evaluaciones faltantes" class="w-16 h-16 max-sm:w-8 max-sm:h-8">
-          <p class="font-sans px-2 text-sky-200 text-5xl font-bold max-sm:text-2xl max-sm:px-0">{{ calcularPorcentajeFaltantes }} %</p>
+          <img src="./img/error.png" alt="evaluaciones faltantes" class="w-16 h-16 max-md:w-8 max-md:h-8">
+          <p class="font-sans px-2 text-sky-200 text-5xl font-bold max-md:text-2xl max-md:px-0">{{ calcularPorcentajeFaltantes }} %</p>
           
          </div>
-          <span class="font-sans text-sky-200 text-lg font-bold max-sm:text-sm">Faltan {{ info.alTotal - info.alEvaluados }}</span>
+          <span class="font-sans text-sky-200 text-lg font-bold max-md:text-sm">Faltan {{ info.alTotal - info.alEvaluados }}</span>
           
 
         </div>
