@@ -116,11 +116,11 @@ const calcularColorAnillo = computed(() => {
           <p class="font-sans text-black font-semibold text-md max-sm:text-sm">Porcentaje de Personas Evaluadas:</p>
 
           <div class="flex flex-row">
-            <p v-if="info && info.alTotal" class="font-sans px-2 text-sky-200 text-5xl max-sm:text-2xl max-sm:px-0 font-bold "> {{
+            <p v-if="info && info.alTotal" class="font-sans px-4  text-sky-200 text-5xl max-sm:text-2xl max-sm:px-0 font-bold "> {{
               calcularPorcentaje }} %
             </p>
             <img v-if="isPantallaPeque" src="./img/lista-de-verificacion.png" alt="evaluaciones completas"
-              class=" w-16 h-16 ">
+              class=" w-16 h-16 max-sm:w-8 max-sm:h-8 max-sm:ml-1">
 
           </div>
           <span v-if="info && info.alEvaluados" class="font-sans text-sky-200 text-lg font-bold max-sm:text-sm">{{ info.alEvaluados
@@ -128,7 +128,7 @@ const calcularColorAnillo = computed(() => {
 
         </div>
 
-        <div class="relative  w-1/3 h-full p-12 max-sm:p-6 ">
+        <div class="relative  w-1/3 h-full p-12 max-sm:p-10 ">
           <div class="absolute inset-0 flex items-center justify-center rounded-bl-full anillo"
             :style="{ background: calcularColorAnillo }"></div>
         </div>
@@ -136,7 +136,7 @@ const calcularColorAnillo = computed(() => {
         <div class="relative w-1/3 h-full">
           <p class="font-sans text-black font-semibold text-md max-sm:text-sm">Porcentaje de Personas Faltantes</p>
          <div class="flex flex-row ">
-          <img v-if="isPantallaPeque" src="./img/error.png" alt="evaluaciones faltantes" class="w-16 h-16">
+          <img src="./img/error.png" alt="evaluaciones faltantes" class="w-16 h-16 max-sm:w-8 max-sm:h-8">
           <p class="font-sans px-2 text-sky-200 text-5xl font-bold max-sm:text-2xl max-sm:px-0">{{ calcularPorcentajeFaltantes }} %</p>
           
          </div>
