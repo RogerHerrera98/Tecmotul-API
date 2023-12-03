@@ -32,14 +32,14 @@ evaluacionTerminal();
 </script>
 
 <template>
-    <div class="max-w-md mx-auto">
+    <div class="max-w-md mx-auto ">
         <div class="flex">
             <div class="w-full">
                 <div class="mb-4">
                     <p>Usuarios Listos</p>
-                    <div class="w-full flex flex-row ">
+                    <div class="w-full flex flex-row  max-sm:place-items-center">
                         <img src="./img/cheque.png" alt="" class="w-10 h-10 ">
-                        <div :style="{ 'width': variable1 + '%' }" class="bg-gradient-to-r from-emerald-500 from-10% to-emerald-900 to-100% h-10  "> </div>
+                        <div :style="{ 'width': variable1 + '%' }" class="bg-gradient-to-r from-emerald-500 from-10% to-emerald-900 to-100% h-10  max-sm:h-6 max-sm:m-1"> </div>
 
                     </div>
                     <p class="px-2">{{ variable1 }} %</p>
@@ -48,9 +48,9 @@ evaluacionTerminal();
 
                 <div v-if="!evaluacionFin">
                     <div class="text-black">Usuarios faltantes </div>
-                    <div class="w-full flex flex-row">
+                    <div class="w-full flex flex-row max-sm:place-items-center">
                         <img src="./img/bloquear.png" alt="" class="w-10 h-10">
-                        <div :style="{ 'width': variable2 + '%' }" class="bg-gradient-to-r from-pink-500 from-10%  to-red-500 to-90% h-10"></div>
+                        <div :style="{ 'width': variable2 + '%' }" class="bg-gradient-to-r from-pink-500 from-10%  to-red-500 to-90% h-10 max-sm:h-6 max-sm:m-1"></div>
                     </div>
                     <p class="px-2">{{ variable2 }} %</p>
                     <p class="text-xs"> Faltan {{ msg.faltantes }} alumnos</p>
