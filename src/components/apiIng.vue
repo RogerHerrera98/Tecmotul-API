@@ -63,7 +63,7 @@ onMounted(() => {
             <div class="w-1/3 h-full m-2 p-4 bg-slate-50 font-sans text-lg  font-semibold rounded-lg transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-slate-50 duration-300 max-sm:w-3/4">
                 <h2 class="font-sans font-semibold">Industrial</h2>
                 <div class="flex justify-center items-center ">
-                    <img src="./img/II2.jpeg" alt="Indutrial" class="w-24">
+                    <img src="./img/II2.jpeg" alt="Indutrial" class="w-16">
                 </div>
                 <iiTarjeta v-if="info && info.II" :msg=info.II />
                 
