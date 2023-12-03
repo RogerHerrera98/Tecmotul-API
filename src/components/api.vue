@@ -12,8 +12,7 @@ const info = ref({
   inicio: "",
   fin: "",
 });
-//Se creo una variable para el control del tamaño de la panatalla
-const isPantallaPeque = ref(window.innerWidth >= 768);
+
 
 const formatoFechaInicio = computed(() => {
   return dayjs(info.value.inicio).format('dddd, DD [de] MMMM [del] YYYY');
@@ -119,7 +118,7 @@ const calcularColorAnillo = computed(() => {
             <p v-if="info && info.alTotal" class="font-sans px-4  text-sky-200 text-5xl max-sm:text-2xl max-sm:px-0 font-bold "> {{
               calcularPorcentaje }} %
             </p>
-            <img v-if="isPantallaPeque" src="./img/lista-de-verificacion.png" alt="evaluaciones completas"
+            <img src="./img/lista-de-verificacion.png" alt="evaluaciones completas"
               class=" w-16 h-16 max-sm:w-8 max-sm:h-8 max-sm:ml-1">
 
           </div>
